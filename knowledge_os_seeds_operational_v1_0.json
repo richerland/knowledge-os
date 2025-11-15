@@ -1,0 +1,90 @@
+{
+  "ontology_id": "knowledge_os_operational_seeds",
+  "version": "1.0.0",
+  "description": "Seeds operacionais iniciais para o Knowledge-OS (documentos e papéis para fluxo de imigração/casos).",
+  "entity_types": [
+    "person",
+    "organization",
+    "place",
+    "time",
+    "value",
+    "document",
+    "event",
+    "role",
+    "unknown"
+  ],
+  "struct_types": [
+    "canonical",
+    "class",
+    "relation",
+    "instance"
+  ],
+  "entities": [
+    {
+      "id": "CLASS_EXPERT_LETTER",
+      "name": "Expert Letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "category": "expert_opinion"
+      }
+    },
+    {
+      "id": "CLASS_SUPPORT_LETTER",
+      "name": "Support Letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "category": "supporting_evidence"
+      }
+    },
+    {
+      "id": "CLASS_BENEFICIARY_ROLE",
+      "name": "Beneficiary",
+      "struct_type": "class",
+      "entity_type": "role",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "role_kind": "case_role"
+      }
+    },
+    {
+      "id": "CLASS_PETITIONER_ROLE",
+      "name": "Petitioner",
+      "struct_type": "class",
+      "entity_type": "role",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "role_kind": "case_role"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "REL_BENEFICIARY_OF",
+      "name": "beneficiary_of",
+      "struct_type": "relation",
+      "domain_entity_type": "person",
+      "range_entity_type": "document",
+      "metadata": {
+        "semantics": "person is beneficiary of the case/document"
+      }
+    },
+    {
+      "id": "REL_PETITIONER_OF",
+      "name": "petitioner_of",
+      "struct_type": "relation",
+      "domain_entity_type": "person",
+      "range_entity_type": "document",
+      "metadata": {
+        "semantics": "person is petitioner of the case/document"
+      }
+    }
+  ]
+}

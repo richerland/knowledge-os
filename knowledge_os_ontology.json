@@ -1,0 +1,164 @@
+{
+  "ontology_id": "knowledge_os_core",
+  "version": "1.0.0",
+  "description": "Ontologia núcleo do Knowledge-OS: tipos de entidade, tipos estruturais e entidades canônicas compatíveis com o modelo SQLAlchemy.",
+  "entity_types": [
+    "person",
+    "organization",
+    "place",
+    "time",
+    "value",
+    "document",
+    "event",
+    "role",
+    "unknown"
+  ],
+  "struct_types": [
+    "canonical",
+    "class",
+    "relation",
+    "instance"
+  ],
+  "entities": [
+    {
+      "id": "CANONICAL_PERSON",
+      "name": "PERSON",
+      "struct_type": "canonical",
+      "entity_type": "person",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    },
+    {
+      "id": "CANONICAL_ORGANIZATION",
+      "name": "ORGANIZATION",
+      "struct_type": "canonical",
+      "entity_type": "organization",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    },
+    {
+      "id": "CANONICAL_PLACE",
+      "name": "PLACE",
+      "struct_type": "canonical",
+      "entity_type": "place",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    },
+    {
+      "id": "CANONICAL_TIME",
+      "name": "TIME",
+      "struct_type": "canonical",
+      "entity_type": "time",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    },
+    {
+      "id": "CANONICAL_VALUE",
+      "name": "VALUE",
+      "struct_type": "canonical",
+      "entity_type": "value",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    },
+    {
+      "id": "CANONICAL_DOCUMENT",
+      "name": "DOCUMENT",
+      "struct_type": "canonical",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    },
+    {
+      "id": "CANONICAL_EVENT",
+      "name": "EVENT",
+      "struct_type": "canonical",
+      "entity_type": "event",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    },
+    {
+      "id": "CANONICAL_ROLE",
+      "name": "ROLE",
+      "struct_type": "canonical",
+      "entity_type": "role",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    },
+    {
+      "id": "CANONICAL_UNKNOWN",
+      "name": "UNKNOWN",
+      "struct_type": "canonical",
+      "entity_type": "unknown",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    }
+  ],
+  "relations": [
+    {
+      "id": "REL_EMPLOYED_AT",
+      "name": "employed_at",
+      "struct_type": "relation",
+      "domain_entity_type": "person",
+      "range_entity_type": "organization",
+      "metadata": {}
+    },
+    {
+      "id": "REL_LOCATED_IN",
+      "name": "located_in",
+      "struct_type": "relation",
+      "domain_entity_type": "organization",
+      "range_entity_type": "place",
+      "metadata": {}
+    },
+    {
+      "id": "REL_OCCURRED_AT_PLACE",
+      "name": "occurred_at_place",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "place",
+      "metadata": {}
+    },
+    {
+      "id": "REL_OCCURRED_AT_TIME",
+      "name": "occurred_at_time",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "time",
+      "metadata": {}
+    },
+    {
+      "id": "REL_HAS_ROLE",
+      "name": "has_role",
+      "struct_type": "relation",
+      "domain_entity_type": "person",
+      "range_entity_type": "role",
+      "metadata": {}
+    },
+    {
+      "id": "REL_AUTHORED_DOCUMENT",
+      "name": "authored_document",
+      "struct_type": "relation",
+      "domain_entity_type": "person",
+      "range_entity_type": "document",
+      "metadata": {}
+    }
+  ],
+  "axioms": {
+    "informal": [
+      "struct_type(e) ∈ {canonical, class, relation, instance}",
+      "struct_type(e) ∈ {canonical, class, instance} → entity_type(e) ∈ entity_types",
+      "struct_type(e) = relation → entity_type(e) = null",
+      "struct_type(e) = relation → domain_entity_type(e), range_entity_type(e) ∈ entity_types",
+      "struct_type(e) ≠ relation → domain_entity_type(e) = range_entity_type(e) = null"
+    ]
+  }
+}

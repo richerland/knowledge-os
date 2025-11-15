@@ -1,0 +1,176 @@
+{
+  "ontology_id": "knowledge_os_snapshot",
+  "version": "1.0.0",
+  "description": "Snapshot v1.0 do Knowledge-OS, incluindo entidades canônicas e classes de domínio básicas.",
+  "entity_types": [
+    "person",
+    "organization",
+    "place",
+    "time",
+    "value",
+    "document",
+    "event",
+    "role",
+    "unknown"
+  ],
+  "struct_types": [
+    "canonical",
+    "class",
+    "relation",
+    "instance"
+  ],
+  "entities": [
+    {
+      "id": "CANONICAL_PERSON",
+      "name": "PERSON",
+      "struct_type": "canonical",
+      "entity_type": "person",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    },
+    {
+      "id": "CANONICAL_ORGANIZATION",
+      "name": "ORGANIZATION",
+      "struct_type": "canonical",
+      "entity_type": "organization",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    },
+    {
+      "id": "CANONICAL_PLACE",
+      "name": "PLACE",
+      "struct_type": "canonical",
+      "entity_type": "place",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    },
+    {
+      "id": "CANONICAL_TIME",
+      "name": "TIME",
+      "struct_type": "canonical",
+      "entity_type": "time",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    },
+    {
+      "id": "CANONICAL_VALUE",
+      "name": "VALUE",
+      "struct_type": "canonical",
+      "entity_type": "value",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    },
+    {
+      "id": "CANONICAL_DOCUMENT",
+      "name": "DOCUMENT",
+      "struct_type": "canonical",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    },
+    {
+      "id": "CANONICAL_EVENT",
+      "name": "EVENT",
+      "struct_type": "canonical",
+      "entity_type": "event",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    },
+    {
+      "id": "CANONICAL_ROLE",
+      "name": "ROLE",
+      "struct_type": "canonical",
+      "entity_type": "role",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    },
+    {
+      "id": "CANONICAL_UNKNOWN",
+      "name": "UNKNOWN",
+      "struct_type": "canonical",
+      "entity_type": "unknown",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {}
+    },
+
+    {
+      "id": "CLASS_REFERENCE_LETTER",
+      "name": "Reference Letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "category": "supporting_evidence"
+      }
+    },
+    {
+      "id": "CLASS_PETITION_LETTER",
+      "name": "Petition Letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "category": "core_petition"
+      }
+    },
+    {
+      "id": "CLASS_BENEFICIARY_ROLE",
+      "name": "Beneficiary",
+      "struct_type": "class",
+      "entity_type": "role",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "role_kind": "case_role"
+      }
+    },
+    {
+      "id": "CLASS_ATTORNEY_ROLE",
+      "name": "Attorney of Record",
+      "struct_type": "class",
+      "entity_type": "role",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "role_kind": "legal_role"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "REL_EMPLOYED_AT",
+      "name": "employed_at",
+      "struct_type": "relation",
+      "domain_entity_type": "person",
+      "range_entity_type": "organization",
+      "metadata": {}
+    },
+    {
+      "id": "REL_AUTHORED_DOCUMENT",
+      "name": "authored_document",
+      "struct_type": "relation",
+      "domain_entity_type": "person",
+      "range_entity_type": "document",
+      "metadata": {}
+    },
+    {
+      "id": "REL_HAS_ROLE",
+      "name": "has_role",
+      "struct_type": "relation",
+      "domain_entity_type": "person",
+      "range_entity_type": "role",
+      "metadata": {}
+    }
+  ]
+}

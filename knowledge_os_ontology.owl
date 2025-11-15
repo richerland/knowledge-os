@@ -1,0 +1,51 @@
+@prefix : <http://example.org/knowledge-os#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:KnowledgeOSOntology a owl:Ontology ;
+    rdfs:label "Knowledge-OS Core Ontology" ;
+    owl:versionInfo "1.0.0" .
+
+:PERSON a owl:Class .
+:ORGANIZATION a owl:Class .
+:PLACE a owl:Class .
+:TIME a owl:Class .
+:VALUE a owl:Class .
+:DOCUMENT a owl:Class .
+:EVENT a owl:Class .
+:ROLE a owl:Class .
+:UNKNOWN a owl:Class .
+
+:employedAt a owl:ObjectProperty ;
+    rdfs:domain :PERSON ;
+    rdfs:range :ORGANIZATION .
+
+:locatedIn a owl:ObjectProperty ;
+    rdfs:domain :ORGANIZATION ;
+    rdfs:range :PLACE .
+
+:occurredAtPlace a owl:ObjectProperty ;
+    rdfs:domain :EVENT ;
+    rdfs:range :PLACE .
+
+:occurredAtTime a owl:ObjectProperty ;
+    rdfs:domain :EVENT ;
+    rdfs:range :TIME .
+
+:hasRole a owl:ObjectProperty ;
+    rdfs:domain :PERSON ;
+    rdfs:range :ROLE .
+
+:authoredDocument a owl:ObjectProperty ;
+    rdfs:domain :PERSON ;
+    rdfs:range :DOCUMENT .
+
+:beneficiaryOf a owl:ObjectProperty ;
+    rdfs:domain :PERSON ;
+    rdfs:range :DOCUMENT .
+
+:petitionerOf a owl:ObjectProperty ;
+    rdfs:domain :PERSON ;
+    rdfs:range :DOCUMENT .
