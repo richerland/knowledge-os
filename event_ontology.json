@@ -1,0 +1,555 @@
+{
+  "ontology_id": "knowledge_os_event_projection",
+  "version": "1.0.0",
+  "description": "Ontologia de Projeção Semântica de Eventos: frames de eventos e papéis estruturais para desidratar texto com preservação factual.",
+  "entity_types": [
+    "person",
+    "organization",
+    "place",
+    "time",
+    "value",
+    "document",
+    "event",
+    "role",
+    "unknown"
+  ],
+  "struct_types": [
+    "canonical",
+    "class",
+    "relation",
+    "instance"
+  ],
+  "entities": [
+    {
+      "id": "FRAME_EMPLOYMENT_EVENT",
+      "name": "EMPLOYMENT_EVENT",
+      "struct_type": "class",
+      "entity_type": "event",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "meta": {
+        "description": "Employment or hiring relationship.",
+        "core_roles_used": ["agent", "patient", "location", "time", "result"],
+        "thematic_roles_used": ["role", "affiliation", "measure", "purpose", "condition"],
+        "frame_specific_roles": {
+          "employer": "agent",
+          "employee": "patient",
+          "position_title": "role",
+          "employment_type": "condition",
+          "employment_start_date": "time",
+          "employment_end_date": "time",
+          "team_size": "measure",
+          "reports_to": "co_agent",
+          "department": "affiliation"
+        }
+      }
+    },
+    {
+      "id": "FRAME_PROMOTION_EVENT",
+      "name": "PROMOTION_EVENT",
+      "struct_type": "class",
+      "entity_type": "event",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "meta": {
+        "description": "Promotion or elevation in position.",
+        "core_roles_used": ["agent", "patient", "time", "result"],
+        "thematic_roles_used": ["role", "cause", "measure", "affiliation"],
+        "frame_specific_roles": {
+          "promoted_employee": "patient",
+          "old_position_title": "role",
+          "new_position_title": "role",
+          "promotion_date": "time",
+          "promotion_reason": "cause",
+          "seniority_level_before": "measure",
+          "seniority_level_after": "measure"
+        }
+      }
+    },
+    {
+      "id": "FRAME_PROJECT_CONTRIBUTION_EVENT",
+      "name": "PROJECT_CONTRIBUTION_EVENT",
+      "struct_type": "class",
+      "entity_type": "event",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "meta": {
+        "description": "Significant contribution to a project or system.",
+        "core_roles_used": ["agent", "theme", "time", "location", "result"],
+        "thematic_roles_used": ["purpose", "manner", "measure", "affiliation", "topic"],
+        "frame_specific_roles": {
+          "contributor": "agent",
+          "project_name": "theme",
+          "project_owner_organization": "affiliation",
+          "contribution_role": "role",
+          "technologies_used": "instrument",
+          "impact_metrics": "measure",
+          "responsibilities_summary": "topic"
+        }
+      }
+    },
+    {
+      "id": "FRAME_AWARD_EVENT",
+      "name": "AWARD_EVENT",
+      "struct_type": "class",
+      "entity_type": "event",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "meta": {
+        "description": "Award, prize or formal recognition.",
+        "core_roles_used": ["agent", "patient", "time", "result", "location"],
+        "thematic_roles_used": ["cause", "measure"],
+        "frame_specific_roles": {
+          "award_name": "result",
+          "awarding_body": "agent",
+          "award_category": "topic",
+          "award_date": "time",
+          "award_basis": "cause",
+          "competition_size": "measure",
+          "rank_position": "measure"
+        }
+      }
+    },
+    {
+      "id": "FRAME_PUBLICATION_EVENT",
+      "name": "PUBLICATION_EVENT",
+      "struct_type": "class",
+      "entity_type": "event",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "meta": {
+        "description": "Publication of a paper, article, book or chapter.",
+        "core_roles_used": ["agent", "theme", "time", "location", "result"],
+        "thematic_roles_used": ["measure", "topic"],
+        "frame_specific_roles": {
+          "title": "theme",
+          "authors": "agent",
+          "venue_name": "location",
+          "venue_type": "role",
+          "publication_date": "time",
+          "doi_or_identifier": "result",
+          "citation_count": "measure",
+          "impact_factor": "measure",
+          "subject_area": "topic"
+        }
+      }
+    },
+    {
+      "id": "FRAME_PRESENTATION_EVENT",
+      "name": "PRESENTATION_EVENT",
+      "struct_type": "class",
+      "entity_type": "event",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "meta": {
+        "description": "Talk, keynote, webinar or technical presentation.",
+        "core_roles_used": ["agent", "theme", "time", "location", "result"],
+        "thematic_roles_used": ["topic", "measure", "purpose"],
+        "frame_specific_roles": {
+          "speaker": "agent",
+          "audience_size": "measure",
+          "event_name": "location",
+          "event_type": "role",
+          "presentation_title": "theme",
+          "presentation_language": "medium"
+        }
+      }
+    },
+    {
+      "id": "FRAME_MEMBERSHIP_EVENT",
+      "name": "MEMBERSHIP_EVENT",
+      "struct_type": "class",
+      "entity_type": "event",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "meta": {
+        "description": "Membership in a professional society or board.",
+        "core_roles_used": ["agent", "patient", "time", "result"],
+        "thematic_roles_used": ["role", "affiliation"],
+        "frame_specific_roles": {
+          "member": "patient",
+          "organization_name": "agent",
+          "membership_type": "role",
+          "membership_start_date": "time",
+          "membership_end_date": "time",
+          "membership_level": "measure"
+        }
+      }
+    },
+    {
+      "id": "FRAME_EDUCATION_EVENT",
+      "name": "EDUCATION_EVENT",
+      "struct_type": "class",
+      "entity_type": "event",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "meta": {
+        "description": "Formal education, degree or advanced training.",
+        "core_roles_used": ["agent", "patient", "time", "location", "result"],
+        "thematic_roles_used": ["purpose", "measure"],
+        "frame_specific_roles": {
+          "student": "patient",
+          "institution_name": "agent",
+          "degree_type": "result",
+          "field_of_study": "topic",
+          "start_date": "time",
+          "end_date": "time",
+          "honors": "measure",
+          "gpa": "measure"
+        }
+      }
+    },
+    {
+      "id": "FRAME_PATENT_EVENT",
+      "name": "PATENT_EVENT",
+      "struct_type": "class",
+      "entity_type": "event",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "meta": {
+        "description": "Filing or grant of a patent.",
+        "core_roles_used": ["agent", "theme", "time", "location", "result"],
+        "thematic_roles_used": ["measure"],
+        "frame_specific_roles": {
+          "patent_number": "result",
+          "patent_title": "theme",
+          "inventors": "agent",
+          "assignee": "beneficiary",
+          "jurisdiction": "location",
+          "filing_date": "time",
+          "grant_date": "time",
+          "ipc_classes": "topic"
+        }
+      }
+    },
+    {
+      "id": "FRAME_PETITION_FILING_EVENT",
+      "name": "PETITION_FILING_EVENT",
+      "struct_type": "class",
+      "entity_type": "event",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "meta": {
+        "description": "Filing of an immigration petition (USCIS).",
+        "core_roles_used": ["agent", "theme", "time", "location", "result"],
+        "thematic_roles_used": ["beneficiary", "medium", "purpose", "affiliation"],
+        "frame_specific_roles": {
+          "petitioner": "agent",
+          "beneficiary": "beneficiary",
+          "attorney_of_record": "co_agent",
+          "petition_type": "topic",
+          "form_number": "theme",
+          "receipt_number": "result",
+          "filing_date": "time",
+          "uscis_service_center": "location",
+          "representative_firm": "affiliation"
+        }
+      }
+    },
+    {
+      "id": "FRAME_USCIS_DECISION_EVENT",
+      "name": "USCIS_DECISION_EVENT",
+      "struct_type": "class",
+      "entity_type": "event",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "meta": {
+        "description": "USCIS decision on a petition.",
+        "core_roles_used": ["agent", "patient", "time", "result"],
+        "thematic_roles_used": ["cause", "medium"],
+        "frame_specific_roles": {
+          "decision_type": "result",
+          "decision_date": "time",
+          "decision_office": "location",
+          "decision_reason_summary": "cause",
+          "linked_petition_receipt_number": "topic"
+        }
+      }
+    },
+    {
+      "id": "FRAME_RFE_EVENT",
+      "name": "RFE_EVENT",
+      "struct_type": "class",
+      "entity_type": "event",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "meta": {
+        "description": "Request for Evidence (RFE) issued by USCIS.",
+        "core_roles_used": ["agent", "patient", "time", "result"],
+        "thematic_roles_used": ["purpose", "topic", "medium"],
+        "frame_specific_roles": {
+          "rfe_issue_date": "time",
+          "rfe_due_date": "time",
+          "rfe_topics": "topic",
+          "rfe_reference_id": "result"
+        }
+      }
+    },
+    {
+      "id": "FRAME_RFE_RESPONSE_EVENT",
+      "name": "RFE_RESPONSE_EVENT",
+      "struct_type": "class",
+      "entity_type": "event",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "meta": {
+        "description": "Response to an RFE.",
+        "core_roles_used": ["agent", "theme", "time", "result"],
+        "thematic_roles_used": ["medium", "purpose"],
+        "frame_specific_roles": {
+          "response_date": "time",
+          "linked_rfe_id": "topic",
+          "submitted_documents_list": "theme"
+        }
+      }
+    },
+    {
+      "id": "FRAME_REFERENCE_LETTER_EVENT",
+      "name": "REFERENCE_LETTER_EVENT",
+      "struct_type": "class",
+      "entity_type": "event",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "meta": {
+        "description": "Issuance of a reference/recommendation letter.",
+        "core_roles_used": ["agent", "theme", "time", "result"],
+        "thematic_roles_used": ["beneficiary", "topic", "affiliation"],
+        "frame_specific_roles": {
+          "recommender_name": "agent",
+          "recommender_affiliation": "affiliation",
+          "recommender_position": "role",
+          "recommended_person": "beneficiary",
+          "relationship_description": "topic",
+          "letter_date": "time"
+        }
+      }
+    },
+    {
+      "id": "FRAME_EXPERT_OPINION_EVENT",
+      "name": "EXPERT_OPINION_EVENT",
+      "struct_type": "class",
+      "entity_type": "event",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "meta": {
+        "description": "Expert opinion or advisory letter.",
+        "core_roles_used": ["agent", "theme", "time", "result"],
+        "thematic_roles_used": ["topic", "affiliation"],
+        "frame_specific_roles": {
+          "expert_name": "agent",
+          "expert_affiliation": "affiliation",
+          "expert_field": "topic",
+          "subject_person": "beneficiary",
+          "opinion_summary": "result",
+          "opinion_date": "time"
+        }
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "event_agent_person",
+      "name": "event_agent_person",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "person",
+      "meta": {
+        "role_level": "N1",
+        "role_name": "agent",
+        "description": "Person acting as agent/initiator of the event."
+      }
+    },
+    {
+      "id": "event_agent_organization",
+      "name": "event_agent_organization",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "organization",
+      "meta": {
+        "role_level": "N1",
+        "role_name": "agent",
+        "description": "Organization acting as agent/initiator of the event."
+      }
+    },
+    {
+      "id": "event_patient",
+      "name": "event_patient",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "unknown",
+      "meta": {
+        "role_level": "N1",
+        "role_name": "patient",
+        "description": "Entity directly affected by the event."
+      }
+    },
+    {
+      "id": "event_theme_document",
+      "name": "event_theme_document",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "document",
+      "meta": {
+        "role_level": "N1",
+        "role_name": "theme",
+        "description": "Document that is the main theme/object of the event."
+      }
+    },
+    {
+      "id": "event_theme_value",
+      "name": "event_theme_value",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "value",
+      "meta": {
+        "role_level": "N1",
+        "role_name": "theme",
+        "description": "Abstract value or concept that is the main theme of the event."
+      }
+    },
+    {
+      "id": "event_instrument_value",
+      "name": "event_instrument_value",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "value",
+      "meta": {
+        "role_level": "N1",
+        "role_name": "instrument",
+        "description": "Instrument, technology or means used to perform the event."
+      }
+    },
+    {
+      "id": "event_result_value",
+      "name": "event_result_value",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "value",
+      "meta": {
+        "role_level": "N1",
+        "role_name": "result",
+        "description": "Resulting state, label or outcome of the event."
+      }
+    },
+    {
+      "id": "event_beneficiary",
+      "name": "event_beneficiary",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "person",
+      "meta": {
+        "role_level": "N2",
+        "role_name": "beneficiary",
+        "description": "Person who benefits from the event."
+      }
+    },
+    {
+      "id": "event_co_agent_person",
+      "name": "event_co_agent_person",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "person",
+      "meta": {
+        "role_level": "N2",
+        "role_name": "co_agent",
+        "description": "Additional person acting jointly with the main agent."
+      }
+    },
+    {
+      "id": "event_topic_value",
+      "name": "event_topic_value",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "value",
+      "meta": {
+        "role_level": "N2",
+        "role_name": "topic",
+        "description": "Topic or subject matter of the event."
+      }
+    },
+    {
+      "id": "event_medium_value",
+      "name": "event_medium_value",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "value",
+      "meta": {
+        "role_level": "N2",
+        "role_name": "medium",
+        "description": "Medium or channel used (e.g. email, portal)."
+      }
+    },
+    {
+      "id": "event_affiliation_organization",
+      "name": "event_affiliation_organization",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "organization",
+      "meta": {
+        "role_level": "N2",
+        "role_name": "affiliation",
+        "description": "Organization with which a participant is affiliated in the context of the event."
+      }
+    },
+    {
+      "id": "event_role_role",
+      "name": "event_role_role",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "role",
+      "meta": {
+        "role_level": "N2",
+        "role_name": "role",
+        "description": "Abstract role played in the event (e.g. Senior Engineer, Attorney of Record)."
+      }
+    },
+    {
+      "id": "event_measure_value",
+      "name": "event_measure_value",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "value",
+      "meta": {
+        "role_level": "N2",
+        "role_name": "measure",
+        "description": "Quantitative metric or extent associated with the event (e.g. team size, citations)."
+      }
+    },
+    {
+      "id": "event_purpose_value",
+      "name": "event_purpose_value",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "value",
+      "meta": {
+        "role_level": "N2",
+        "role_name": "purpose",
+        "description": "Purpose or intended goal of the event."
+      }
+    },
+    {
+      "id": "event_cause_value",
+      "name": "event_cause_value",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "value",
+      "meta": {
+        "role_level": "N2",
+        "role_name": "cause",
+        "description": "Cause or reason that triggered the event."
+      }
+    },
+    {
+      "id": "event_manner_value",
+      "name": "event_manner_value",
+      "struct_type": "relation",
+      "domain_entity_type": "event",
+      "range_entity_type": "value",
+      "meta": {
+        "role_level": "N2",
+        "role_name": "manner",
+        "description": "Manner in which the event was carried out."
+      }
+    }
+  ]
+}
