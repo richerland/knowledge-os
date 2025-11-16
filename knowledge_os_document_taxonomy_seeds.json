@@ -1,0 +1,1284 @@
+{
+  "ontology_id": "knowledge_os_document_taxonomy",
+  "version": "1.0.0",
+  "description_pt": "Taxonomia canônica em 3 níveis para documentos de processos de imigração: Nível 1 = superclasses de documento (formato/forma), Nível 2 = famílias funcionais, Nível 3 = templates concretos (chave do catálogo).",
+  "entity_types": [
+    "person",
+    "organization",
+    "place",
+    "time",
+    "value",
+    "document",
+    "event",
+    "role",
+    "unknown"
+  ],
+  "struct_types": [
+    "canonical",
+    "class",
+    "relation",
+    "instance"
+  ],
+  "entities": [
+    {
+      "id": "DOC_L1_LETTER_DECLARATION",
+      "name": "LETTER_DECLARATION",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 1,
+        "label_pt": "Cartas / declarações narrativas"
+      }
+    },
+    {
+      "id": "DOC_L1_GOV_FORM",
+      "name": "GOV_FORM",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 1,
+        "label_pt": "Formulários governamentais de imigração"
+      }
+    },
+    {
+      "id": "DOC_L1_STRUCTURED_PLAN_OR_REPORT",
+      "name": "STRUCTURED_PLAN_OR_REPORT",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 1,
+        "label_pt": "Planos / relatórios narrativos estruturados"
+      }
+    },
+    {
+      "id": "DOC_L1_EVIDENCE_PACKET_OR_DOSSIER",
+      "name": "EVIDENCE_PACKET_OR_DOSSIER",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 1,
+        "label_pt": "Dossiês / pacotes de evidências"
+      }
+    },
+
+    {
+      "id": "DOC_L2_BANK_FINANCIAL_REFERENCE",
+      "name": "BANK_FINANCIAL_REFERENCE",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de referência bancária"
+      }
+    },
+    {
+      "id": "DOC_L2_BUSINESS_NECESSITY",
+      "name": "BUSINESS_NECESSITY",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de necessidade comercial"
+      }
+    },
+    {
+      "id": "DOC_L2_BUSINESS_PLAN",
+      "name": "BUSINESS_PLAN",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "label_pt": "Planos de negócios"
+      }
+    },
+    {
+      "id": "DOC_L2_CHANGE_OF_ADDRESS_FORM",
+      "name": "CHANGE_OF_ADDRESS_FORM",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "GOV_FORM",
+        "label_pt": "Formulários de mudança de endereço"
+      }
+    },
+    {
+      "id": "DOC_L2_CLIENT_VENDOR_PARTNER",
+      "name": "CLIENT_VENDOR_PARTNER",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de clientes / fornecedores / parceiros"
+      }
+    },
+    {
+      "id": "DOC_L2_COMMERCIALIZATION_PLAN",
+      "name": "COMMERCIALIZATION_PLAN",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "label_pt": "Planos de comercialização / go-to-market"
+      }
+    },
+    {
+      "id": "DOC_L2_CORPORATE_RESOLUTION",
+      "name": "CORPORATE_RESOLUTION",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Resoluções societárias (board / shareholders)"
+      }
+    },
+    {
+      "id": "DOC_L2_ECONOMIC_IMPACT_REPORT_LETTER",
+      "name": "ECONOMIC_IMPACT_REPORT_LETTER",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de relatório de impacto econômico"
+      }
+    },
+    {
+      "id": "DOC_L2_EMPLOYER_SUPPORT",
+      "name": "EMPLOYER_SUPPORT",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de apoio do empregador"
+      }
+    },
+    {
+      "id": "DOC_L2_ESCROW_CONFIRMATION",
+      "name": "ESCROW_CONFIRMATION",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de confirmação de conta escrow"
+      }
+    },
+    {
+      "id": "DOC_L2_EXPERIENCE_DUTIES_VERIFICATION",
+      "name": "EXPERIENCE_DUTIES_VERIFICATION",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de verificação de experiência / funções"
+      }
+    },
+    {
+      "id": "DOC_L2_EXPERT_OPINION_OR_CONSULTATION",
+      "name": "EXPERT_OPINION_OR_CONSULTATION",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de parecer / consulta de especialista"
+      }
+    },
+    {
+      "id": "DOC_L2_EXPLANATION_PERSONAL",
+      "name": "EXPLANATION_PERSONAL",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Declarações pessoais / cartas de explicação"
+      }
+    },
+    {
+      "id": "DOC_L2_FINANCIAL_PROJECTIONS_NARRATIVE",
+      "name": "FINANCIAL_PROJECTIONS_NARRATIVE",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "label_pt": "Narrativas de projeções financeiras"
+      }
+    },
+    {
+      "id": "DOC_L2_HIRING_PLAN",
+      "name": "HIRING_PLAN",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "label_pt": "Planos de contratação"
+      }
+    },
+    {
+      "id": "DOC_L2_INVITATION_APPOINTMENT",
+      "name": "INVITATION_APPOINTMENT",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de convite / nomeação"
+      }
+    },
+    {
+      "id": "DOC_L2_ITINERARY",
+      "name": "ITINERARY",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de itinerário"
+      }
+    },
+    {
+      "id": "DOC_L2_JOB_OFFER",
+      "name": "JOB_OFFER",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de oferta de trabalho"
+      }
+    },
+    {
+      "id": "DOC_L2_MARKETING_PLAN",
+      "name": "MARKETING_PLAN",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "label_pt": "Planos de marketing"
+      }
+    },
+    {
+      "id": "DOC_L2_MEDIA_AWARDS_MEMBERSHIP_VERIFICATION",
+      "name": "MEDIA_AWARDS_MEMBERSHIP_VERIFICATION",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de verificação de mídia / prêmios / associações"
+      }
+    },
+    {
+      "id": "DOC_L2_NATIONAL_IMPACT_PLAN",
+      "name": "NATIONAL_IMPACT_PLAN",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "label_pt": "Planos de impacto nacional"
+      }
+    },
+    {
+      "id": "DOC_L2_NOTICE_OF_ENTRY_OF_APPEARANCE_FORM",
+      "name": "NOTICE_OF_ENTRY_OF_APPEARANCE_FORM",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "GOV_FORM",
+        "label_pt": "Formulários de notificação de representação (G-28 etc.)"
+      }
+    },
+    {
+      "id": "DOC_L2_OPERATIONS_PLAN",
+      "name": "OPERATIONS_PLAN",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "label_pt": "Planos operacionais"
+      }
+    },
+    {
+      "id": "DOC_L2_PETITION_OR_EVALUATION_COVER",
+      "name": "PETITION_OR_EVALUATION_COVER",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de capa de petição / avaliação"
+      }
+    },
+    {
+      "id": "DOC_L2_PROFESSIONAL_PLAN",
+      "name": "PROFESSIONAL_PLAN",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "label_pt": "Planos de carreira profissional"
+      }
+    },
+    {
+      "id": "DOC_L2_PROPOSED_ENDEAVOR_PLAN",
+      "name": "PROPOSED_ENDEAVOR_PLAN",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "label_pt": "Planos de empreendimento proposto"
+      }
+    },
+    {
+      "id": "DOC_L2_RECOMMENDATION_SUPPORT",
+      "name": "RECOMMENDATION_SUPPORT",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de recomendação / apoio"
+      }
+    },
+    {
+      "id": "DOC_L2_RECRUITMENT_REPORT_SUMMARY",
+      "name": "RECRUITMENT_REPORT_SUMMARY",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas-resumo de recrutamento"
+      }
+    },
+    {
+      "id": "DOC_L2_REGIONAL_CENTER_SPONSORSHIP",
+      "name": "REGIONAL_CENTER_SPONSORSHIP",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de patrocínio de centro regional"
+      }
+    },
+    {
+      "id": "DOC_L2_RESEARCH_PLAN",
+      "name": "RESEARCH_PLAN",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "label_pt": "Planos de pesquisa"
+      }
+    },
+    {
+      "id": "DOC_L2_RFE_NOID_AUDIT_COVER",
+      "name": "RFE_NOID_AUDIT_COVER",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de capa para respostas a RFE/NOID/auditoria"
+      }
+    },
+    {
+      "id": "DOC_L2_RISK_COMPLIANCE_PLAN",
+      "name": "RISK_COMPLIANCE_PLAN",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "label_pt": "Planos de risco e conformidade"
+      }
+    },
+    {
+      "id": "DOC_L2_SALARY_WAGE_VERIFICATION",
+      "name": "SALARY_WAGE_VERIFICATION",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de verificação salarial"
+      }
+    },
+    {
+      "id": "DOC_L2_SOURCE_OF_FUNDS",
+      "name": "SOURCE_OF_FUNDS",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Declarações de origem de fundos"
+      }
+    },
+    {
+      "id": "DOC_L2_TEA_EVIDENCE_PACKET",
+      "name": "TEA_EVIDENCE_PACKET",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "EVIDENCE_PACKET_OR_DOSSIER",
+        "label_pt": "Dossiês de evidências de TEA"
+      }
+    },
+    {
+      "id": "DOC_L2_TRANSLATOR_CERTIFICATION",
+      "name": "TRANSLATOR_CERTIFICATION",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de certificação de tradutor"
+      }
+    },
+    {
+      "id": "DOC_L2_WAGE_LEVEL_EXPLANATION",
+      "name": "WAGE_LEVEL_EXPLANATION",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de explicação de nível salarial"
+      }
+    },
+    {
+      "id": "DOC_L2_WITHDRAWAL_EXPEDITE_PROCEDURAL",
+      "name": "WITHDRAWAL_EXPEDITE_PROCEDURAL",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 2,
+        "parent_level_1": "LETTER_DECLARATION",
+        "label_pt": "Cartas de retirada / agilização / pedidos processuais"
+      }
+    },
+
+    {
+      "id": "DOC_TPL_AR11_CHANGE_OF_ADDRESS",
+      "name": "ar11_change_of_address",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "GOV_FORM",
+        "canonical_level_2": "CHANGE_OF_ADDRESS_FORM"
+      }
+    },
+    {
+      "id": "DOC_TPL_AWARD_VERIFICATION_LETTER",
+      "name": "award_verification_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "MEDIA_AWARDS_MEMBERSHIP_VERIFICATION"
+      }
+    },
+    {
+      "id": "DOC_TPL_BANK_REFERENCE_LETTER",
+      "name": "bank_reference_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "BANK_FINANCIAL_REFERENCE"
+      }
+    },
+    {
+      "id": "DOC_TPL_BUSINESS_NECESSITY_LETTER",
+      "name": "business_necessity_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "BUSINESS_NECESSITY"
+      }
+    },
+    {
+      "id": "DOC_TPL_BUSINESS_PLAN",
+      "name": "business_plan",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "canonical_level_2": "BUSINESS_PLAN"
+      }
+    },
+    {
+      "id": "DOC_TPL_CLIENT_END_CLIENT_LETTER",
+      "name": "client_end_client_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "CLIENT_VENDOR_PARTNER"
+      }
+    },
+    {
+      "id": "DOC_TPL_COMMERCIALIZATION_GO_TO_MARKET_PLAN",
+      "name": "commercialization_go_to_market_plan",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "canonical_level_2": "COMMERCIALIZATION_PLAN"
+      }
+    },
+    {
+      "id": "DOC_TPL_CONFERENCE_INVITATION_LETTER",
+      "name": "conference_invitation_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "INVITATION_APPOINTMENT"
+      }
+    },
+    {
+      "id": "DOC_TPL_CREDENTIAL_EVALUATION_COVER_LETTER",
+      "name": "credential_evaluation_cover_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "PETITION_OR_EVALUATION_COVER"
+      }
+    },
+    {
+      "id": "DOC_TPL_DOCUMENT_TRANSMITTAL_LETTER",
+      "name": "document_transmittal_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "PETITION_OR_EVALUATION_COVER"
+      }
+    },
+    {
+      "id": "DOC_TPL_DUTIES_VERIFICATION_LETTER",
+      "name": "duties_verification_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "EXPERIENCE_DUTIES_VERIFICATION"
+      }
+    },
+    {
+      "id": "DOC_TPL_ECONOMIC_IMPACT_REPORT_LETTER",
+      "name": "economic_impact_report_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "ECONOMIC_IMPACT_REPORT_LETTER"
+      }
+    },
+    {
+      "id": "DOC_TPL_EDITORIAL_BOARD_APPOINTMENT_LETTER",
+      "name": "editorial_board_appointment_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "INVITATION_APPOINTMENT"
+      }
+    },
+    {
+      "id": "DOC_TPL_EMPLOYER_SUPPORT_LETTER",
+      "name": "employer_support_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "EMPLOYER_SUPPORT"
+      }
+    },
+    {
+      "id": "DOC_TPL_ESCROW_CONFIRMATION_LETTER",
+      "name": "escrow_confirmation_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "ESCROW_CONFIRMATION"
+      }
+    },
+    {
+      "id": "DOC_TPL_EXPEDITE_REQUEST_LETTER",
+      "name": "expedite_request_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "WITHDRAWAL_EXPEDITE_PROCEDURAL"
+      }
+    },
+    {
+      "id": "DOC_TPL_EXPERIENCE_VERIFICATION_LETTER",
+      "name": "experience_verification_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "EXPERIENCE_DUTIES_VERIFICATION"
+      }
+    },
+    {
+      "id": "DOC_TPL_EXPERT_OPINION_LETTER",
+      "name": "expert_opinion_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "EXPERT_OPINION_OR_CONSULTATION"
+      }
+    },
+    {
+      "id": "DOC_TPL_FINANCIAL_PROJECTIONS_NARRATIVE",
+      "name": "financial_projections_narrative",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "canonical_level_2": "FINANCIAL_PROJECTIONS_NARRATIVE"
+      }
+    },
+    {
+      "id": "DOC_TPL_G28_NOTICE_OF_ENTRY",
+      "name": "g28_notice_of_entry",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "GOV_FORM",
+        "canonical_level_2": "NOTICE_OF_ENTRY_OF_APPEARANCE_FORM"
+      }
+    },
+    {
+      "id": "DOC_TPL_HIRING_PLAN",
+      "name": "hiring_plan",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "canonical_level_2": "HIRING_PLAN"
+      }
+    },
+    {
+      "id": "DOC_TPL_ITINERARY_LETTER",
+      "name": "itinerary_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "ITINERARY"
+      }
+    },
+    {
+      "id": "DOC_TPL_JOB_OFFER_LETTER",
+      "name": "job_offer_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "JOB_OFFER"
+      }
+    },
+    {
+      "id": "DOC_TPL_JUDGING_INVITATION_LETTER",
+      "name": "judging_invitation_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "INVITATION_APPOINTMENT"
+      }
+    },
+    {
+      "id": "DOC_TPL_LETTER_OF_EXPLANATION",
+      "name": "letter_of_explanation",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "EXPLANATION_PERSONAL"
+      }
+    },
+    {
+      "id": "DOC_TPL_MARKETING_PLAN",
+      "name": "marketing_plan",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "canonical_level_2": "MARKETING_PLAN"
+      }
+    },
+    {
+      "id": "DOC_TPL_MEDIA_CONFIRMATION_LETTER",
+      "name": "media_confirmation_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "MEDIA_AWARDS_MEMBERSHIP_VERIFICATION"
+      }
+    },
+    {
+      "id": "DOC_TPL_MEMBERSHIP_VERIFICATION_LETTER",
+      "name": "membership_verification_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "MEDIA_AWARDS_MEMBERSHIP_VERIFICATION"
+      }
+    },
+    {
+      "id": "DOC_TPL_NATIONAL_IMPACT_PLAN",
+      "name": "national_impact_plan",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "canonical_level_2": "NATIONAL_IMPACT_PLAN"
+      }
+    },
+    {
+      "id": "DOC_TPL_NOID_RESPONSE_COVER_LETTER",
+      "name": "noid_response_cover_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "RFE_NOID_AUDIT_COVER"
+      }
+    },
+    {
+      "id": "DOC_TPL_O1_CONSULTATION_ADVISORY_OPINION",
+      "name": "o1_consultation_advisory_opinion",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "EXPERT_OPINION_OR_CONSULTATION"
+      }
+    },
+    {
+      "id": "DOC_TPL_OPERATIONS_PLAN",
+      "name": "operations_plan",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "canonical_level_2": "OPERATIONS_PLAN"
+      }
+    },
+    {
+      "id": "DOC_TPL_PERM_AUDIT_RESPONSE_COVER_LETTER",
+      "name": "perm_audit_response_cover_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "RFE_NOID_AUDIT_COVER"
+      }
+    },
+    {
+      "id": "DOC_TPL_PERSONAL_STATEMENT",
+      "name": "personal_statement",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "EXPLANATION_PERSONAL"
+      }
+    },
+    {
+      "id": "DOC_TPL_PETITION_COVER_LETTER",
+      "name": "petition_cover_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "PETITION_OR_EVALUATION_COVER"
+      }
+    },
+    {
+      "id": "DOC_TPL_PROFESSIONAL_PLAN",
+      "name": "professional_plan",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "canonical_level_2": "PROFESSIONAL_PLAN"
+      }
+    },
+    {
+      "id": "DOC_TPL_PROPOSED_ENDEAVOR_PLAN",
+      "name": "proposed_endeavor_plan",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "canonical_level_2": "PROPOSED_ENDEAVOR_PLAN"
+      }
+    },
+    {
+      "id": "DOC_TPL_PUBLISHER_ACCEPTANCE_LETTER",
+      "name": "publisher_acceptance_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "MEDIA_AWARDS_MEMBERSHIP_VERIFICATION"
+      }
+    },
+    {
+      "id": "DOC_TPL_RECOMMENDATION_LETTER",
+      "name": "recommendation_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "RECOMMENDATION_SUPPORT"
+      }
+    },
+    {
+      "id": "DOC_TPL_RECRUITMENT_REPORT_SUMMARY_LETTER",
+      "name": "recruitment_report_summary_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "RECRUITMENT_REPORT_SUMMARY"
+      }
+    },
+    {
+      "id": "DOC_TPL_REGIONAL_CENTER_SPONSORSHIP_LETTER",
+      "name": "regional_center_sponsorship_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "REGIONAL_CENTER_SPONSORSHIP"
+      }
+    },
+    {
+      "id": "DOC_TPL_RESEARCH_PLAN",
+      "name": "research_plan",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "canonical_level_2": "RESEARCH_PLAN"
+      }
+    },
+    {
+      "id": "DOC_TPL_REVIEWER_INVITATION_LETTER",
+      "name": "reviewer_invitation_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "INVITATION_APPOINTMENT"
+      }
+    },
+    {
+      "id": "DOC_TPL_RFE_RESPONSE_COVER_LETTER",
+      "name": "rfe_response_cover_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "RFE_NOID_AUDIT_COVER"
+      }
+    },
+    {
+      "id": "DOC_TPL_RISK_COMPLIANCE_PLAN",
+      "name": "risk_compliance_plan",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "STRUCTURED_PLAN_OR_REPORT",
+        "canonical_level_2": "RISK_COMPLIANCE_PLAN"
+      }
+    },
+    {
+      "id": "DOC_TPL_SALARY_VERIFICATION_LETTER",
+      "name": "salary_verification_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "SALARY_WAGE_VERIFICATION"
+      }
+    },
+    {
+      "id": "DOC_TPL_SHAREHOLDER_BOARD_RESOLUTION_LETTER",
+      "name": "shareholder_board_resolution_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "CORPORATE_RESOLUTION"
+      }
+    },
+    {
+      "id": "DOC_TPL_SOURCE_OF_FUNDS_DECLARATION",
+      "name": "source_of_funds_declaration",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "SOURCE_OF_FUNDS"
+      }
+    },
+    {
+      "id": "DOC_TPL_SUPPORT_LETTER_COLLABORATOR",
+      "name": "support_letter_collaborator",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "RECOMMENDATION_SUPPORT"
+      }
+    },
+    {
+      "id": "DOC_TPL_TEA_EVIDENCE_PACKET",
+      "name": "tea_evidence_packet",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "EVIDENCE_PACKET_OR_DOSSIER",
+        "canonical_level_2": "TEA_EVIDENCE_PACKET"
+      }
+    },
+    {
+      "id": "DOC_TPL_TRANSLATOR_CERTIFICATION_LETTER",
+      "name": "translator_certification_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "TRANSLATOR_CERTIFICATION"
+      }
+    },
+    {
+      "id": "DOC_TPL_UNIVERSITY_APPOINTMENT_LETTER",
+      "name": "university_appointment_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "INVITATION_APPOINTMENT"
+      }
+    },
+    {
+      "id": "DOC_TPL_VENDOR_PARTNER_LETTER",
+      "name": "vendor_partner_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "CLIENT_VENDOR_PARTNER"
+      }
+    },
+    {
+      "id": "DOC_TPL_WAGE_LEVEL_EXPLANATION_LETTER",
+      "name": "wage_level_explanation_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "WAGE_LEVEL_EXPLANATION"
+      }
+    },
+    {
+      "id": "DOC_TPL_WITHDRAWAL_REQUEST_LETTER",
+      "name": "withdrawal_request_letter",
+      "struct_type": "class",
+      "entity_type": "document",
+      "domain_entity_type": null,
+      "range_entity_type": null,
+      "metadata": {
+        "taxonomy_level": 3,
+        "canonical_level_1": "LETTER_DECLARATION",
+        "canonical_level_2": "WITHDRAWAL_EXPEDITE_PROCEDURAL"
+      }
+    }
+  ],
+  "relations": []
+}
